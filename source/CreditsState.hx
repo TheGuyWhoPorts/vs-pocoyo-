@@ -81,7 +81,8 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-                        ['Psych Engine Android Port'],
+
+			['Psych Engine Android Port'],
                         ['idklool (or Boyfriend FNF idc)', 'nothing', 'Hi I ported the Psych Engine', 'youtube.com/c/BoyfriendFNF', 'FFFFFF'],
                         ['Dxgamer', 'dxgamer', 'Coder Help', 'https://youtube.com/c/Dxgamer7405', 'FFFFFF'],
 			['Psych Engine Team'],
@@ -303,8 +304,8 @@ class CreditsState extends MusicBeatState
 		if(modsAdded.contains(folder)) return;
 
 		var creditsFile:String = null;
-		if(folder != null && folder.trim().length > 0) creditsFile = Paths.mods(folder + '/data/credits.txt');
-		else creditsFile = Paths.mods('data/credits.txt');
+		if(folder != null && folder.trim().length > 0) creditsFile = Paths.assets(folder + '/data/credits.txt');
+		else creditsFile = Paths.assets('data/credits.txt');
 
 		if (Assets.exists(creditsFile))
 		{
